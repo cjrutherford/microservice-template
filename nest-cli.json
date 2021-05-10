@@ -1,0 +1,57 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/microservices/src",
+  "monorepo": true,
+  "root": "apps/microservices",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/microservices/tsconfig.app.json"
+  },
+  "projects": {
+    "microservices": {
+      "type": "application",
+      "root": "apps/microservices",
+      "entryFile": "main",
+      "sourceRoot": "apps/microservices/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/microservices/tsconfig.app.json"
+      }
+    },
+    "sql-proxy": {
+      "type": "application",
+      "root": "apps/sql-proxy",
+      "entryFile": "main",
+      "sourceRoot": "apps/sql-proxy/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/sql-proxy/tsconfig.app.json"
+      }
+    },
+    "document-db": {
+      "type": "application",
+      "root": "apps/document-db",
+      "entryFile": "main",
+      "sourceRoot": "apps/document-db/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/document-db/tsconfig.app.json"
+      }
+    },
+    "authentication": {
+      "type": "application",
+      "root": "apps/authentication",
+      "entryFile": "main",
+      "sourceRoot": "apps/authentication/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/authentication/tsconfig.app.json"
+      }
+    },
+    "common": {
+      "type": "library",
+      "root": "libs/common",
+      "entryFile": "index",
+      "sourceRoot": "libs/common/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/common/tsconfig.lib.json"
+      }
+    }
+  }
+}
